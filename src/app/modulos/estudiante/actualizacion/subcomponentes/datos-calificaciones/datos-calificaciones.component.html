@@ -1,0 +1,27 @@
+<div  class="d-flex justify-content-end m-4">
+  <app-modal-estudiante (eventoGuardar)="guardarDatosCalificaciones($event)"></app-modal-estudiante>
+</div>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Tarea</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Fecha inicio</th>
+        <th scope="col">Fecha fin</th>
+        <th scope="col">Calificaci&oacute;n</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let calificaciones of arrayCalificaciones ">
+        <td>{{ calificaciones.nombreTarea }}</td>
+        <td>{{ calificaciones.descripcionTarea }}</td>
+        <td>{{ calificaciones.fechaInicio }}</td>
+        <td>{{ calificaciones.fechaFin }}</td>
+        <td>{{ calificaciones.calificacion }}</td>
+        <td>{{calificaciones.calificacion | estadoCalificacionesPipe}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

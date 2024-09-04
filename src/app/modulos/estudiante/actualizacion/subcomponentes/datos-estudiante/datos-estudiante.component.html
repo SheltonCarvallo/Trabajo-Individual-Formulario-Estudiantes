@@ -1,0 +1,67 @@
+<form #formDatosPersonales="ngForm"  (ngSubmit)="guardarDatosPersonales()" action="">
+    <div>
+        <div class="m-3">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="primerNombre">Primer Nombre</label>
+                    </div>
+                    <div>
+                        <input class="form-control" [(ngModel)]="primer_nombre" #primerNombre="ngModel" required="true" [pattern]="'[a-zA-Z ]{2,254}'" type="text" name="primerNombre" id="primerNombre"
+                            placeholder="Ingrese su primer nombre">
+                            <div [hidden]="primerNombre.valid || primerNombre.pristine" class="alert alert-danger"> CAMPO INVALIDO </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="segundoNombreID">Segundo Nombre</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="segundoNombre" id="segundoNombreID"
+                            placeholder="Ingrese su segundo nombre">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="apellidoEstudianteID">Primer Apellido</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="apellidoEstudiante" id="apellidoEstudianteID"
+                            placeholder="Ingrese su primer apellido">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="SegundoApellidoEstudianteID">Segundo Apellido</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="SegundoApellidoEstudiante"
+                            id="SegundoApellidoEstudianteID" placeholder="Ingrese su segundo apellido">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="col">
+                        <label for="fechaNacimeinto">Fecha de nacimiento</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="date" name="fechaNacimeinto" id="fechaNacimeinto"
+                            placeholder="Ingrese fecha de nacimiento">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="Curso">Curso</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="email" name="Curso" id="Curso"
+                            placeholder="Ingrese el curso">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

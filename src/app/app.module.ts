@@ -3,14 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EstudianteModule } from './modulos/estudiante/estudiante.module';
+//import { EstadoCalificacionesPipePipe } from './pipes/estado-calificaciones-pipe.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    //EstadoCalificacionesPipePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    EstudianteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-end m-2">
+  <button type="button" class="btn btn-success m-2" data-bs-toggle="modal" [attr.data-bs-target]="'#'+modalid">Agregar</button>
+</div>
+
+<div class="modal fade" id="{{modalid}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Persona</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="divMensaje"></div>
+      <div class="modal-body">
+        <form method="post">
+          <div class="mb-3">
+            <label for="tarea" class="col-form-label">Tarea:</label>
+            <input type="text" name="recipient-name" [(ngModel)]="datosCalificacion.nombreTarea" class="form-control" id="tarea" required>
+          </div>
+          <div class="mb-3">
+            <label for="descripcionTarea" class="col-form-label">Descripcion:</label>
+            <input name="recipient-lastname" type="text" [(ngModel)]="datosCalificacion.descripcionTarea"  class="form-control" id="descripcionTarea" required>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-birthdate" class="col-form-label">Fecha de inicio</label>
+            <input name="recipient-birthdate" type="date" [(ngModel)]="datosCalificacion.fechaInicio" class="form-control" id="recipient-birthdate" required>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-genre" class="col-form-label">Fecha fin</label>
+            <input name="recipient-genre" type="date" [(ngModel)]="datosCalificacion.fechaFin" class="form-control" id="recipient-genre" required>
+          </div>
+          <div class="mb-3">
+            <label for="recipient-phone" class="col-form-label">Calificaci&oacute;n</label>
+            <input name="recipient-phone" type="text" [(ngModel)]="datosCalificacion.calificacion" class="form-control" id="recipient-phone" required>
+          </div>
+          <div class="modal-footer">
+            <input type="button" id="btnCerrarModal" class="btn btn-secondary" value="Cerrar" data-bs-dismiss="modal">
+            <input type="button" id="btnGuardar" class="btn btn-primary" value="Guardar" (click)="guardar()">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

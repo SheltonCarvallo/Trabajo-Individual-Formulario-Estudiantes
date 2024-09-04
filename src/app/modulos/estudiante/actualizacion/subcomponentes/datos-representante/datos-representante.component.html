@@ -1,0 +1,78 @@
+<form #formDatosRepresentante="ngForm"  (ngSubmit)="guardarDatosRepresentante()" action="">
+    <div>
+        <div class="m-3">
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="primerNombre">Primer Nombre</label>
+                    </div>
+                    <div>
+                        <input class="form-control" [(ngModel)]="primer_nombre" #primerNombre="ngModel" required="true" [pattern]="'[a-zA-Z ]{2,254}'" type="text" name="primerNombre" id="primerNombre"
+                            placeholder="Ingrese su primer nombre">
+                            <div [hidden]="primerNombre.valid || primerNombre.pristine" class="alert alert-danger"> CAMPO INVALIDO </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="segundoNombreID">Segundo Nombre</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="segundoNombre" id="segundoNombreID"
+                            placeholder="Ingrese su segundo nombre">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="apellidoEstudianteID">Primer Apellido</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="apellidoEstudiante" id="apellidoEstudianteID"
+                            placeholder="Ingrese su primer apellido">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="SegundoApellidoEstudianteID">Segundo Apellido</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="SegundoApellidoEstudiante"
+                            id="SegundoApellidoEstudianteID" placeholder="Ingrese su segundo apellido">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="col">
+                        <label for="relacion">Relacion</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="relacion" id="relacion"
+                            placeholder="">
+                    </div>
+                </div>
+                <div class="col">
+                    <div>
+                        <label for="Tel&eacute;fono">Tel&eacute;fono</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="Tel&eacute;fono" id="Tel&eacute;fono"
+                            placeholder="Ingrese N&uacute;mero de Tel&eacute;fono ">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div>
+                        <label for="email">Email</label>
+                    </div>
+                    <div>
+                        <input class="form-control" type="text" name="email" id="email"
+                            placeholder="Ingrese su Email ">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
